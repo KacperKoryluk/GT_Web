@@ -1,0 +1,62 @@
+﻿@model DF_Web.Models.DungeonList
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    #Dungeons {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #Dungeons td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #Dungeons tr:nth-child(even) {
+            background-color: #ddd;
+        }
+
+        #Dungeons tr:hover {
+            background-color: darkslategray;
+            color: #ddd;
+        }
+
+        #Dungeons th {
+            border: 1px solid #ddd;
+            padding-left: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: darkslategray;
+            color: #ddd;
+        }
+</style>
+
+<h1>Paths rolled:</h1>
+<div>
+    <table id="Dungeons">
+        <tr>
+            <th>Dungeon Name</th>
+            <th>Path</th>
+        </tr>
+        @foreach (var item in Model.GetRandomDungeonList(4))
+            {
+
+            <tr>
+                <td>@item.GetName()</td>
+                <td>@item.GetRandomPath()</td>
+            </tr>
+            }
+    </table>
+
+        </div>
+<h1>Bonus path:</h1>
+<div>
+    <h4>@Model.GetArah().GetName() :  @Model.GetArah().GetRandomPath()</h4>
+</div>
+

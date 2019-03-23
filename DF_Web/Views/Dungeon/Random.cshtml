@@ -1,0 +1,8 @@
+﻿@model DF_Web.Models.Dungeon
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.GetName()</h2>
+<h3>@Model.GetRandomPath()</h3>
