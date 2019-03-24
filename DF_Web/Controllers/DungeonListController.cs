@@ -10,10 +10,11 @@ namespace DF_Web.Controllers
     public class DungeonListController : Controller
     {
         // GET: DungeonList/Random
-        public ActionResult Random()
+        [Route("Dungeons/RandomList/{size:regex(\\d{1}):range(1, 7)}")]
+        public ActionResult Random(int size)
         {
             Random rnd = new System.Random();
-            DungeonList DList = new DungeonList(rnd);
+            DungeonList DList = new DungeonList(rnd, size);
             
             return View(DList);
         }

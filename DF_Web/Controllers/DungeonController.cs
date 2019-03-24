@@ -13,9 +13,10 @@ namespace DF_Web.Controllers
         public ActionResult Random()
         {
             Random rnd = new System.Random();
-            DungeonList DungeonList = new DungeonList(rnd);
-            
-            return View(DungeonList.GetRandomDungeon());
+            DungeonList DungeonList = new DungeonList(rnd, 1);
+
+            // return View(DungeonList.GetRandomDungeon());
+            return new HttpNotFoundResult();
         }
     }
 }

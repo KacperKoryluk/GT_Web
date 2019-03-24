@@ -44,7 +44,7 @@
             <th>Dungeon Name</th>
             <th>Path</th>
         </tr>
-        @foreach (var item in Model.GetRandomDungeonList(4))
+        @foreach (var item in Model.GetRandomDungeonList())
             {
 
             <tr>
@@ -60,3 +60,17 @@
     <h4>@Model.GetArah().GetName() :  @Model.GetArah().GetRandomPath()</h4>
 </div>
 
+
+    <div align="center">   
+        <h3>Set amount of paths</h3> 
+    </div>
+
+<div align="center">
+    <button style="font-size : 30px">@Html.ActionLink("1", "RandomList/1", "Dungeons")</button>
+    <button style="font-size : 30px">@Html.ActionLink("2", "RandomList/2", "Dungeons")</button>
+    <button style="font-size : 30px">@Html.ActionLink("3", "RandomList/3", "Dungeons")</button>
+    <button style="font-size : 30px">@Html.ActionLink("4", "RandomList/4", "Dungeons")</button>
+    <button style="font-size : 30px">@Html.ActionLink("5", "RandomList/5", "Dungeons")</button>
+    <button style="font-size : 30px">@Html.ActionLink("6", "RandomList/6", "Dungeons")</button>
+    <button style="font-size : 30px">@Html.ActionLink("7", "RandomList/7", "Dungeons")</button>
+</div>

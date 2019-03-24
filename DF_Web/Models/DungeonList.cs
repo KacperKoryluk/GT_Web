@@ -10,11 +10,13 @@ namespace DF_Web.Models
     {
         private List<Dungeon> ContentList;
         private Dungeon Arah;
+        private int ListSize;
         Random rnd;
 
-        public DungeonList(Random _rnd)
+        public DungeonList(Random _rnd, int _size)
         {
             rnd = _rnd;
+            ListSize = _size;
             ContentList = new List<Dungeon>();
         
             ContentList.Add(new Dungeon(new List<string>() { "Path 1 - Hodgins", "Path 2 - Detha", "Path 3 - Tzark" }, "Ascalonian Catacombs", _rnd));
@@ -32,13 +34,13 @@ namespace DF_Web.Models
             return ContentList.ElementAt(rnd.Next(ContentList.Count));
         }
 
-        public List<Dungeon> GetRandomDungeonList(int size)
+        public List<Dungeon> GetRandomDungeonList()
         {
-            if (size > 0 && size < ContentList.Count)
+            if (ListSize > 0 && ListSize < ContentList.Count)
             {
                 HashSet<Dungeon> DSet = new HashSet<Dungeon>();
                 
-                while (DSet.Count < size)
+                while (DSet.Count < ListSize)
                 {
                     DSet.Add(ContentList.ElementAt(rnd.Next(ContentList.Count)));
                 }

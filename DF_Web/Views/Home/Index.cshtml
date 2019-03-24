@@ -3,29 +3,65 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Dungeon Roller</h1>
+    <p class="lead">
+        This application came to existence just to roll desired amount of paths from Guild Wars 2 dungeons. 
+        It is used for guild events, to replace manual rolling of each path.
+    </p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+   <!-- This looks horrible, change it-->
+        <h2>Unique paths, unique dungeons</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <ul><li>Set amount of paths</li></ul> 
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <button class="dropdown-item" style="font-size : 20px">@Html.ActionLink("1", "RandomList/1", "Dungeons")</button>
+                    <button class="dropdown-item" style="font-size : 20px">@Html.ActionLink("2", "RandomList/2", "Dungeons")</button>
+                    <button class="dropdown-item" style="font-size : 20px">@Html.ActionLink("3", "RandomList/3", "Dungeons")</button>
+                    <button class="dropdown-item" style="font-size : 20px">@Html.ActionLink("4", "RandomList/4", "Dungeons")</button>
+                    <button class="dropdown-item" style="font-size : 20px">@Html.ActionLink("5", "RandomList/5", "Dungeons")</button>
+                    <button class="dropdown-item" style="font-size : 20px">@Html.ActionLink("6", "RandomList/6", "Dungeons")</button>
+                    <button class="dropdown-item" style="font-size : 20px">@Html.ActionLink("7", "RandomList/7", "Dungeons")</button>   
+                </div>
+            </div>
+
+
+       
+                
+                
+            
+
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Functionality 2</h2>
+        <p>
+            <ul>
+                <li>@Html.ActionLink("Not yet", "", "")</li>
+            </ul>
+
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Functionality 3</h2>
+        <p>
+            <ul>
+                <li>@Html.ActionLink("Not yet", "", "")</li>
+            </ul>
+
+        </p>
     </div>
 </div>
+
+
+
+
+
